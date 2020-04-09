@@ -8,9 +8,9 @@ class HomeController extends Controller
 {
     //
     function affichePost(){
-        // récupérer tous les posts dans un tableau
+        // récupérer tous les posts dans un tableau ordonné selon les dates 
         //récupérer juste les trois derniers
-        $posts=\App\Post::orderBy('post_date', 'desc')->get();            
+        $posts=\App\Post::orderBy('post_date', 'desc')->get()->take(3);            
                         
         return view ('welcome',array(//passer les données récupérées à la vue
             'posts' => $posts
@@ -18,13 +18,7 @@ class HomeController extends Controller
         ));
     }
 
-   // function index(){
-      //  $nom = "yasmine HADJARAB";
-        //return view('welcome')->with('name',$nom);
-
-        //return view('welcome',compact('nom','nom'));
-  // }
-//
+  
     function article(){
         $categorie= "categorie d'article";
        
