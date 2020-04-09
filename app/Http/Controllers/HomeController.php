@@ -10,9 +10,7 @@ class HomeController extends Controller
     function affichePost(){
         // récupérer tous les posts dans un tableau
         //récupérer juste les trois derniers
-        $posts=\App\Post::all()->where('id','>',7);
-                            
-                         
+        $posts=\App\Post::orderBy('post_date', 'desc')->get();            
                         
         return view ('welcome',array(//passer les données récupérées à la vue
             'posts' => $posts

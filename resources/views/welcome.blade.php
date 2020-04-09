@@ -11,11 +11,11 @@
 
 <h1>Coucou c'est moi !!</h1>
 
-<h2> liste des clients: </h2>
+<h2> liste des posts: </h2>
 <ul>
 @foreach ( $posts as $post )
 
-  <li> <a href= "http://localhost:8000/article">{{ $post->id .' ' . $post->post_name }}</a></li>
+  <li> <a href= "http://localhost:8000/article">{{ $post->id .')-' . $post->post_name .'-'.$post->post_date }}</a></li>
 
 @endforeach
 </ul>
