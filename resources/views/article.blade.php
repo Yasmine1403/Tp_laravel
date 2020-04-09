@@ -9,7 +9,8 @@
 
 @section('content2')
 <h2>affichage des articles:</h2> 
+
 <?php $libele= "nom de l'article" ?> 
-<?php echo $libele ; ?>
+<?php echo $libele ; ?> 
 
 @endsection

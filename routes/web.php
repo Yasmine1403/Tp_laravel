@@ -15,7 +15,7 @@ Route::get('/', function () {// la fonction permet d'afficher la vue welcome sur
     return view('welcome');
 });
 
-Route::get('/', 'HomeController@index');
+Route::get('/', 'HomeController@affichePost');
 
 Route::get('/article', 'HomeController@article' );
 
