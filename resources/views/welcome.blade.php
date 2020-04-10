@@ -11,10 +11,11 @@
 
 
 <h3> Derniers posts: </h3>
+
 <ul>
 @foreach ( $posts as $post )
 
-  <li> <a href= "http://localhost:8000/posts/">{{ $post->post_name }}</a></li>
+  <li> <a href= "http://localhost:8000/posts/{{ $post->post_name }}">{{ $post->post_name }}</a></li>
 
 @endforeach
 </ul>

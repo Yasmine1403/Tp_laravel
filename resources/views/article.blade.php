@@ -1,16 +1,14 @@
-@extends('layouts/main', ['title'=>'article'])
+@extends('layouts/main', ['title'=>'Articles disponibles'])
 
 @section('content')
-<h1>ici la page Article</h1> 
-<?php echo $categorie ; ?> 
+<h3> ici, vous pouvez consulter l'ensemble des articles !! </br></h3> 
 
+
+<ul>
+@foreach ($posts as $post)
+ <li><a href="http://localhost:8000/article/{{$post->post_name }}">{{$post->post_name }}</a></li>
+ @endforeach
+ </ul>
 @endsection
 
 
-@section('content2')
-<h2>affichage des articles:</h2> 
-
-<?php $libele= "nom de l'article" ?> 
-<?php echo $libele ; ?> 
-
-@endsection

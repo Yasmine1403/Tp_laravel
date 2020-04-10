@@ -15,12 +15,14 @@ Route::get('/', function () {// la fonction permet d'afficher la vue welcome sur
     return view('welcome');
 });
 
-Route::get('/', 'HomeController@affichePost');
+Route::get('/', 'HomeController@affichePost');//page d'accuil
 
-Route::get('/article', 'HomeController@article');
-Route::get('/posts/{post_name}', 'PostsController@show');
+Route::get('/article', 'ArticlesController@listArticle');//page d'affichage de la liste 
+                                                         //des articles
+
+Route::get('/posts/{post_name}', 'PostsController@show'); //page d'affichage d'un article
+Route::get('/article/{post_name}', 'PostsController@show'); //page d'affichage d'un article
 
 
 
-
-Route::get('/contact', 'HomeController@contact');
+Route::get('/contact', 'HomeController@contact');//page contact
