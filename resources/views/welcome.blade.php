@@ -14,7 +14,7 @@
 <ul>
 @foreach ( $posts as $post )
 
-  <li> <a href= "http://localhost:8000/article">{{ $post->post_name }}</a></li>
+  <li> <a href= "http://localhost:8000/posts/">{{ $post->post_name }}</a></li>
 
 @endforeach
 </ul>

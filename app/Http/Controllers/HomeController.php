@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     //
-    function affichePost(){
+    public function affichePost(){
         // récupérer tous les posts dans un tableau ordonné selon les dates 
         //récupérer juste les trois derniers
         $posts=\App\Post::orderBy('post_date', 'desc')->get()->take(3);            
@@ -19,15 +19,17 @@ class HomeController extends Controller
     }
 
   
-    function article(){
+    public function article(){
         $categorie= "categorie d'article";
        
         return view('article', compact('categorie'));
     }
 
-    function contact(){
+   public function contact(){
         return view('contact');
     }
+
+    
 
 
 }
