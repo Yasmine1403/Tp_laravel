@@ -13,6 +13,13 @@ class ContactsController extends Controller
 
  
     public function depot(){
+
+        request()->validate([
+            'nom'=> 'required',
+            'email' => ['regex:/^.+@.+$/i'],
+            'mdp'=> ['password:api']
+        ]);
+
     //enregistrer les données saisies dans le formulaire dans notre base de données 
         $name=request('nom');
         $email=request('email');
