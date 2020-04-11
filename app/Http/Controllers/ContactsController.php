@@ -11,9 +11,10 @@ class ContactsController extends Controller
         return view('contact');
     }
 
+    
  
-    public function depot(){
-
+    public function store(){
+        //validation du formulaire
         request()->validate([
             'nom'=> 'required',
             'email' => ['regex:/^.+@.+$/i'],
@@ -33,7 +34,8 @@ class ContactsController extends Controller
 
        $user->save();
        
-       return back();
+      return back();
+      
              
     }
 
