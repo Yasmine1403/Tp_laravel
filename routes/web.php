@@ -25,4 +25,7 @@ Route::get('/article/{post_name}', 'PostsController@show'); //page d'affichage d
 
 
 
-Route::get('/contact', 'HomeController@contact');//page contact
+Route::get('/contact', 'ContactsController@contact');//page contact
+
+Route::post('/contact', 'ContactsController@depot');//récupération des données 
+                                                    //saisies dans le formulaire

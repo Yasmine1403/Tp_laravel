@@ -18,18 +18,4 @@ class HomeController extends Controller
         ));
     }
 
-  
-    public function article(){
-        $categorie= "categorie d'article";
-       
-        return view('article', compact('categorie'));
-    }
-
-   public function contact(){
-        return view('contact');
-    }
-
-    
-
-
 }
