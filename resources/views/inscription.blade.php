@@ -1,9 +1,9 @@
-@extends('layouts/main', ['title'=>'contacts'])
+@extends('layouts/main', ['title'=>'inscription'])
 
 @section('content')
-<h3>Envoyer un message: </h3>
+<h3>Devenir membre: </h3>
 
-<form action="/contact" method="Post">
+<form action="/inscription" method="Post">
 @csrf
 <div calss="form-group">
     
@@ -14,14 +14,12 @@
     email: {!! $errors->first('email', '<small class="help-block">:message</small>') !!}
     <input type="email" class="form-control @error('email') is-invalid @enderror" name = "email" placeholder ="email" >
     
-    message: {!! $errors->first('message', '<small class="help-block">:message</small>') !!}
-    <textarea class="form-control @error('message') is-invalid @enderror" name = "message" placeholder ="Tapez votre message" ></textarea>
     
-    <input type="submit" class="btn btn-primary" value="Envoyer">  
-
-    </form>
-
-     
-
+   Mot de passe: {!! $errors->first('mdp', '<small class="help-block">:message</small>') !!}
+     <input type="password" class="form-control @error('mdp') is-invalid @enderror" name = "mdp" placeholder="********" >
+    
+   
+<input type="submit" class="btn btn-primary" value="Je m'inscris">  
+</form>
 
 @endsection

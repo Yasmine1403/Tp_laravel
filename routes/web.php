@@ -29,3 +29,10 @@ Route::get('/contact', 'ContactsController@contact');//page contact
 
 Route::post('/contact', 'ContactsController@store');//récupération des données 
                                                     //saisies dans le formulaire
+                                                    // via la méthode post
+                                                    
+
+Route::get('/inscription', 'InscriptionController@inscription');//page inscription
+Route::post('/inscription', 'InscriptionController@ajouter');//recuperation des données
+                                                            //saisies dans le formulaire
+                                                            // via la méthode post

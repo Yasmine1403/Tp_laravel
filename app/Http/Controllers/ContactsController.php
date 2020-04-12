@@ -18,28 +18,28 @@ class ContactsController extends Controller
         request()->validate([
             'nom'=> 'required',
             'email' => ['regex:/^.+@.+$/i'],
-            'mdp'=> ['password:api']
+           'message'=> 'required'
+           //'mdp'=>['password:api']
         ]);
 
     //enregistrer les données saisies dans le formulaire dans notre base de données 
         $name=request('nom');
         $email=request('email');
-        $mdp=request('mdp');
-        
-       // dd($name .' '.$email.' '. $mdp );
-       $user= new \App\User();
-       $user->name= $name;
-       $user->email= $email;
-       $user->password= $mdp;
-
-       $user->save();
+        $message=request('message');
        
-      return back();
-      
+        
+        //dd($name .' '.$email.' '. $message );
+
+        $contact= new \App\Contact();
+        $contact->contact_name= $name;
+        $contact->contact_email= $email;
+        $contact->contact_message= $message;
+
+         
+         $contact->save();
+       
+      return back();   
              
     }
-
-
-
 
 }

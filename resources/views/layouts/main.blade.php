@@ -15,6 +15,7 @@
 <li><a href="http://localhost:8000/">Home</a></li>
 <li><a href="http://localhost:8000/article">Article</a></li>
 <li><a href="/contact">Contact</a></li>
+<li><a href="/inscription">Nous rejoindre</a></li>
 </ul>
 </div>
 </div>
