@@ -33,6 +33,15 @@ Route::post('/contact', 'ContactsController@store');//récupération des donnée
                                                     
 
 Route::get('/inscription', 'InscriptionController@inscription');//page inscription
-Route::post('/inscription', 'InscriptionController@ajouter');//recuperation des données
-                                                            //saisies dans le formulaire
-                                                            // via la méthode post
+
+Route::post('/inscription', 'InscriptionController@ajouter');//recuperation des données 
+                                                            //utilisateur saisies dans le
+                                                            //formulaire via la méthode post
+
+
+Route::post('/post', 'CommentsController@store');//récupération des données saisies 
+                                                 //dans le formulaire de commentaires
+                                                 // via la méthode post
+
+
+                                                            

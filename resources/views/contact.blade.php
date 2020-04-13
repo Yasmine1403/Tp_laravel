@@ -16,7 +16,7 @@
     
     message: {!! $errors->first('message', '<small class="help-block">:message</small>') !!}
     <textarea class="form-control @error('message') is-invalid @enderror" name = "message" placeholder ="Tapez votre message" ></textarea>
-    
+</div>
     <input type="submit" class="btn btn-primary" value="Envoyer">  
 
     </form>

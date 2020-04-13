@@ -4,39 +4,35 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class ContactsController extends Controller
+class CommentsController extends Controller
 {
     
-    public function contact(){
-        return view('contact');
-    }
-
-    
- 
     public function store(){
         //validation du formulaire
         request()->validate([
             'nom'=> 'required',
             'email' => ['regex:/^.+@.+$/i'],
-            'message'=> 'required'
+            'commentaire'=> 'required'
            
         ]);
 
     //enregistrer les données saisies dans le formulaire dans notre base de données 
         $name=request('nom');
         $email=request('email');
-        $message=request('message');
+        $commentaire=request('commentaire');
+        $id=request('id');
        
         
-        //dd($name .' '.$email.' '. $message );
+        //dd($name .' '.$email.' '. $commentaire );
 
-        $contact= new \App\Contact();
-        $contact->contact_name= $name;
-        $contact->contact_email= $email;
-        $contact->contact_message= $message;
+        $comment= new \App\Comment();
+        $comment->post_id= $id;
+        $comment->comment_name= $name;
+        $comment->comment_email= $email;
+        $comment->comment_content= $commentaire;
 
          
-         $contact->save();
+        $comment->save();
        
       return back();   
              

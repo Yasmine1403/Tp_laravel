@@ -31,6 +31,10 @@
 
     @yield('content')
     @yield('content2')
+    </br></br>
+    @yield('content3')
+    </br></br>
+    @yield('content4')
 </div>
 
 
