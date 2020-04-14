@@ -12,7 +12,7 @@ class CommentsController extends Controller
         request()->validate([
             'nom'=> 'required',
             'email' => ['regex:/^.+@.+$/i'],
-            'commentaire'=> 'required'
+            'commentaire'=>'required'
            
         ]);
 
@@ -25,6 +25,8 @@ class CommentsController extends Controller
         
         //dd($name .' '.$email.' '. $commentaire );
 
+        //créer un nouveau commentaire avec les donnée fournies dans le formulaire
+        //et l'enregister dans la base de données
         $comment= new \App\Comment();
         $comment->post_id= $id;
         $comment->comment_name= $name;

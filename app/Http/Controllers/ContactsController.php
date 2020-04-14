@@ -8,7 +8,7 @@ class ContactsController extends Controller
 {
     
     public function contact(){
-        return view('contact');
+        return view('contact');//afficher la page contact
     }
 
     
@@ -22,7 +22,7 @@ class ContactsController extends Controller
            
         ]);
 
-    //enregistrer les données saisies dans le formulaire dans notre base de données 
+    //enregistrer les données saisies dans le formulaire 
         $name=request('nom');
         $email=request('email');
         $message=request('message');
@@ -30,6 +30,8 @@ class ContactsController extends Controller
         
         //dd($name .' '.$email.' '. $message );
 
+        //créer un nouveau contact avec les donnée fournies dans le formulaire
+        //et l'enregister dans la base de données
         $contact= new \App\Contact();
         $contact->contact_name= $name;
         $contact->contact_email= $email;

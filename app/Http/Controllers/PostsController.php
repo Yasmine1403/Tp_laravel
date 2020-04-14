@@ -20,11 +20,13 @@ public function show($post_name) {
   // récupérer tous les commentaires dans un tableau ordonné selon les dates 
   $id=$post->id;
   //stocker l'id de la requette $post pour la jointure avec la requette $comments
+  //pour spécifier les commentaire propre à chacun des articles
   $comments=\App\Comment::where('post_id',$id)->get();  
 
   return view('post')->with('post',$post)
                       ->with('user',$user)
-                      ->with('comments', $comments);
+                      ->with('comments', $comments);//afficher les commentaires 
+                                                    //de chaque article
 
 }
 
