@@ -1,78 +1,87 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+Bienvenue dans « Mon Mini Blog » 
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Cette application est réalisée par Hadj ARAB Yasmine 
 
-## About Laravel
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Présentation :
+il s’agit de l’implémentation d’une application dans le cadre du rendu de projet du cours programmation web coté serveur.
+Projet : « création d’une application web avec le framework PHP Laravel »
+MASTER MIASHS DCISS 2020.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+L’application est en cours, n’est pas totalement finie et d’autres fonctionnalités vont être implémentées et rajoutées afin d’enrichir le service qu’offre cette l’application.
 
-## Learning Laravel
+Contenu : 
+Le dossier fourni contient les répertoires Laravel de notre application, une installation préalable du framwrk Laravel est donc nécessaire, il faudra installer également sqlite3 pour pouvoir, utiliser une base de donnée en local.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Comment l’installer ?
+C’est très simple, si vous avez déjà Laravel et sqlite3 sur votre machine, passez directement à la Section2.  
+Si vous n’avez pas encore installé Laravel sur votre machine, téléchargez et installez les paquets suivants, (Section1) en collant dans votre terminal les lignes de commandes suivantes, les une après les autres :
+Section1 :
+pour installer composer :
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 
-## Laravel Sponsors
+php -r "if (hash_file('sha384', 'composer-setup.php') === 'e0012edf3e80b6978849f5eff0d4b4e4c79ff1609dd1e613307e16318854d24ae64f26d17af3ef0bf7cfb710ca74755a') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+php composer-setup.php
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+php -r "unlink('composer-setup.php');"
 
-## Contributing
+mv composer.phar /usr/local/bin/composer
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Maintenant composer est installé, vous pouvez vérifier en tapant : composer –version
 
-## Code of Conduct
+pour installer laravel via laravel composer:
+composer global require laravel/installer
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+pour installer sqlite3:
+apt -get install sqlite3
 
-## Security Vulnerabilities
+(cela suppose que vous êtes sous linux et que vous avez php accessible en ligne de commande / précédez les lignes de commandes ci-haut avec sudo si vous êtes en mode super utilisateur)
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+A présent vous devez avoir Laravel et sqlite3 d’installés, vous pouvez le vérifier en tapant respectivement :
+laravel 
+sqlite3
+Section2 :
 
-## License
+    •  Clonez le dépôt Tp_laravel sur votre machine à partir de: https://github.com/Yasmine1403/Tp_laravel.git 
+ou en tapant dans votre terminal : 
+git clone https://github.com/Yasmine1403/Tp_laravel.git 
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    • Placer vous dans le répertoire du projet et lancez le serveur, en tapant depuis le terminal :
+php artisan serv 
+
+Le blog devrait être accessible à partir de l’URL affichée dans votre console (Ouvrez le lien).
+
+    • Modifiez le fichier  .env de l’application en spécifiant le chemin complet vers le fichier database.sqlite du répertoire database, exemple :
+       DB_DATABASE=/home/yasmine/Documents/projetWeb/tp/yasmine/database/database.sqlite
+Après avoir modifier le fichier .env  il faudra couper le serveur puis le relancer.
+
+    • Lancez les migrations pour créer les tables de la base de données avec la commande :
+        php artisan migrate
+      
+    • Pour peupler la base de données, lancez à partir de la console la commande :
+        php artisan migrate:fresh --seed -v
+      
+      Si cela ne fonctionne pas tapez la commande :
+      composer dump-autoload
+      Puis:
+      php artisan db:seed –class=UsersTableSeeder
+      
+      En principe les table sont crées avec 10  faker enregistrements .  
+la base de donnée est en principe visualisable à partir de l’interface graphique phpLiteAdmin via l’URL http://127.0.0.1:8000/phpliteadmin.php  Le mot de passe est admin
+      
+      Vous pouvez également vérifier cela via tinker en tapant dans votre console (après avoir coupé le serveur, ou en ouvrant un autre terminal et vous situer dans le répertoire du projet):
+         php artisan tinker 
+      
+      Cela vous permet d’accéder à tinker et d’afficher par exemple le contenu de la table user avec :  App\User:: all();    Ou   App\User::all()->pluck('name'); (pour afficher juste les noms)
+      (ctrl+c) pour quitter tinker
+
+Maintenant retournons sur le Blog, vous pouvez pour le moment, vous inscrire, envoyer un message, lire un article ou le commenter. 
+La page d’accueil vous affiche les trois derniers articles enregistrés.
+Vous pouvez consultez ces articles et les commentez ou consulter la totalité des articles disponibles à partir de la rubrique Article. 
+
+#A venir :
+plein d’autres fonctionnalités géniales. 
+#ressources utilisées : Framwork Laravel , template HTML “Blog Single Column” 
