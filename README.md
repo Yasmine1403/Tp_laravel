@@ -37,9 +37,11 @@ mv composer.phar /usr/local/bin/composer
 Maintenant composer est installé, vous pouvez vérifier en tapant : 
 composer --version
 
+
 pour installer laravel via laravel composer, tapez dans la console:
 
 composer global require laravel/installer
+
 
 pour installer sqlite3, tapez:
 
@@ -53,6 +55,7 @@ laravel
 
 sqlite3
 
+Et maintenant, passons à l'installation du projet:
 
 Section2 :
 
@@ -95,10 +98,12 @@ Après avoir modifier le fichier .env  il faudra couper le serveur puis le relan
       
       En principe les table sont crées avec 10  faker enregistrements . 
       
-la base de donnée est en principe visualisable à partir de l’interface graphique phpLiteAdmin via l’URL http://127.0.0.1:8000/phpliteadmin.php  Le mot de passe est admin
+la base de donnée est en principe visualisable à partir de l’interface graphique phpLiteAdmin 
+via l’URL http://127.0.0.1:8000/phpliteadmin.php  Le mot de passe est admin
 
       
-      Vous pouvez également vérifier cela via tinker en tapant dans votre console (après avoir coupé le serveur, ou en ouvrant un autre terminal et vous situer dans le répertoire du projet):
+      Vous pouvez également vérifier cela via tinker en tapant dans votre console 
+      (après avoir coupé le serveur, ou en ouvrant un autre terminal et vous situer dans le répertoire du projet):
       
          php artisan tinker 
            
