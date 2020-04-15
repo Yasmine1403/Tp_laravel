@@ -117,10 +117,15 @@ via l’URL http://127.0.0.1:8000/phpliteadmin.php  Le mot de passe est admin
 Maintenant retournons sur le Blog, vous pouvez pour le moment, vous inscrire, envoyer un message, lire un article ou le commenter.
 
 La page d’accueil vous affiche les trois derniers articles enregistrés.
-Vous pouvez consultez ces articles et les commentez ou consulter la totalité des articles disponibles à partir de la rubrique Article. 
+Vous pouvez consulter ces articles et les commenter ou consulter la totalité des articles disponibles à partir de la rubrique Article. 
+
+Rubrique contact pour envoyer un message.
+
+Rubrique Nous rejoindre pour s'inscrire.
 
 
 #A venir :
-plein d’autres fonctionnalités géniales. 
+plein d’autres fonctionnalités géniales, et stylisation des pages. 
 
-#ressources utilisées : Framwork Laravel , template HTML “Blog Single Column” 
+#Ressources utilisées : 
+Framwork Laravel , template HTML “Blog Single Column” 
